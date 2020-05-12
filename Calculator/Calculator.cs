@@ -11,23 +11,23 @@ namespace Calculator
 
         public void Calculate()
         {
-            double first = AskForNumber("First number: ");
+            decimal first = AskForNumber("First number: ");
             string op = AskForOperator("Operator: ");
-            double second = AskForNumber("Second number: ");
+            decimal second = AskForNumber("Second number: ");
 
-            double result = Operator.Calculate(first, op, second);
+            decimal result = Operator.Calculate(first, op, second);
             Console.WriteLine($"Result: {first} {op} {second} = {result}");
         }
 
-        private double AskForNumber(string prompt)
+        private decimal AskForNumber(string prompt)
         {
-            double value;
+            decimal value;
             bool valid;
 
             do
             {
                 Console.Write(prompt);
-                valid = double.TryParse(Console.ReadLine().Trim(), out value);
+                valid = decimal.TryParse(Console.ReadLine().Trim(), out value);
                 if (!valid)
                 {
                     Console.WriteLine("Invalid number");

@@ -13,7 +13,7 @@ namespace Calculator
             _operators[op] = t;
         }
 
-        public static double Calculate(double first, string op, double second)
+        public static decimal Calculate(decimal first, string op, decimal second)
         {
             Operator opInstance = CreateOperator(op);
             return opInstance.Calculate(first, second);
@@ -29,6 +29,6 @@ namespace Calculator
             return (Operator) Activator.CreateInstance(_operators[op]);
         }
 
-        public abstract double Calculate(double first, double second);
+        public abstract decimal Calculate(decimal first, decimal second);
     }
 }
