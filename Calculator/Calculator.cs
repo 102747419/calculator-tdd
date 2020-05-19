@@ -6,7 +6,7 @@ namespace Calculator
     {
         public Calculator()
         {
-
+            Operator.RegisterOperator("%", typeof(Modulo));
         }
 
         public void Calculate()
