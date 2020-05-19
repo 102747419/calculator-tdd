@@ -6,7 +6,11 @@ namespace Calculator
     {
         public override decimal Calculate(decimal first, decimal second)
         {
-            throw new NotImplementedException();
+            if (second == 0)
+            {
+                return first;
+            }
+            return first % second;
         }
     }
 }
