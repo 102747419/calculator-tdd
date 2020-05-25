@@ -18,18 +18,18 @@ namespace Calculator
         }
         [TestCase(1, 2, 3)]
         [TestCase(0.1,0.2,0.3)]
-        public void Testaddingbothpositive(decimal first, decimal second, decimal result)
+        public void TestAddingBothPositive(decimal first, decimal second, decimal result)
         {
             Assert.AreEqual(result, addition.Calculate(first, second));
         }
         [TestCase(-2,3.5,1.5)]
         [TestCase(-3.5,2,-1.5)]
-        public void Testaddingpositivenegative(decimal first, decimal second, decimal result)
+        public void TestAddingPositiveNegative(decimal first, decimal second, decimal result)
         {
             Assert.AreEqual(result, addition.Calculate(first, second));
         }
         [TestCase(-3,-4,-7)]
-        public void Testaddingbothnegative(int first, int second, int result)
+        public void TestAddingBothNegative(int first, int second, int result)
         {
             Assert.AreEqual(result, addition.Calculate(first, second));
         }
