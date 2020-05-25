@@ -6,11 +6,11 @@ namespace Calculator
     {
         public override decimal Calculate(decimal first, decimal second)
         {
-            if (second == 0)
-            {
-                return first;
-            }
-            return first % second;
+                if (second == 0)
+                {
+                    return first;
+                }
+                return first % second;
         }
     }
 }
