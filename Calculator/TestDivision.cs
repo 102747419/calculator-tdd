@@ -33,5 +33,23 @@ namespace Calculator
             Assert.AreEqual(result, division.Calculate(first, second));
         }
 
+        [TestCase(0, 3, 0)]
+        [TestCase(0, -3, 0)]
+        [TestCase(0, 3.2, 0)]
+        [TestCase(0, -3.2, 0)]
+        public void TestDivideFirstZero(decimal first, decimal second, decimal result)
+        {
+            Assert.AreEqual(result, division.Calculate(first, second));
+        }
+
+        [TestCase(2, 0, 0)]
+        [TestCase(-2, 0, 0)]
+        [TestCase(2.1, 0, 0)]
+        [TestCase(-2.1, 0, 0)]
+        public void TestDivideSecondZero(decimal first, decimal second, decimal result)
+        {
+            Assert.AreEqual(result, division.Calculate(first, second));
+        }
+
     }
 }
